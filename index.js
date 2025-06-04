@@ -21,7 +21,12 @@ let routes = {
         "/index" : (req, res) => {
             res.writeHead(200, {"content-type": "text/html"});
             res.end("<h1>POST method => /index route </h1>");
-        }
+        },
+    },
+
+    "NA": (req, res) => {
+        res.writeHead(404);
+        res.end("<h1>No Page For That Route</h1>");
     }
 }
 let startServer = (req, res) => {
@@ -31,7 +36,14 @@ let startServer = (req, res) => {
     let reqMethod = req.method;
    // routes[reqMethod][reqURL]();
   // console.log(urlObj.pathname);
-  routes[reqMethod][urlObj.pathname](req, res);
+  //routes[reqMethod][urlObj.pathname](req, res);
+  let resolveRoute = routes[reqMethod][urlObj.pathname];
+  
+  if (resolveRoute != undefined && resolveRoute != null) {
+    resolveRoute(req, res);
+  } else {
+    routes["NA"](req, res);
+  }
  }
 let server = http.createServer(startServer);
 
