@@ -1,0 +1,72 @@
+Sample JavaScript Projects
+----------------------------
+Phase(1)Beginner Mini Projects (Core JS + DOM)
+
+1. Digital Clock (🕒 uses setInterval)
+Practice: Date(), setInterval, string formatting
+
+Features: Show current time and update every second
+
+2. Word Counter
+Practice: split(), trim(), basic DOM
+
+Input a paragraph, count how many words and characters
+
+3. Typing Speed Tester
+Practice: Date, split, simple logic
+
+Show a sentence → start timer → user types → calculate speed
+
+4. To-Do List App
+Practice: addEventListener, createElement, localStorage
+
+Add/remove tasks, save in browser
+
+5. Number Guessing Game
+Practice: Math.random(), conditionals, user input
+
+Let the user guess a random number with hints
+-------------------------------------------------------------------------------------
+Phase 2: Intermediate Projects (Flow Control, Events, Timer, Arrays)
+
+6. Quiz App
+Practice: Arrays, DOM, click events, control flow
+
+Show multiple questions, score calculation
+
+7. Pomodoro Timer
+Practice: setInterval, time logic, pause/resume
+
+25-min focus, 5-min break timer system
+
+8. Image Slider / Carousel
+Practice: setInterval, querySelectorAll, arrays
+
+Show images one after another with buttons
+
+9. Calculator
+Practice: Button click events, expression logic
+
+Build a working basic calculator
+
+10. Accordion FAQ
+Practice: show/hide with class toggling
+
+Expand/collapse answers when clicking questions
+----------------------------------------------------------------------------------------
+Phase 3: Small Games (Fun + Logic)
+
+11. Rock Paper Scissors
+Practice: random choice, conditionals, score tracking
+
+12. Memory Card Game (Flip Matching)
+Practice: timers, event control, array shuffling
+
+13. Snake Game (Canvas)
+Practice: setInterval, 2D grid logic, keyboard events
+
+14. Whack-a-Mole
+Practice: random positioning, click detection, scoring
+
+15. Tic Tac Toe
+Practice: 2D array, win condition checks

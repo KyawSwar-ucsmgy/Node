@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+     <h1>Add Form</h1>
+    <div>
+        <div><input type="text" name="" id="a"><label for="a">Please enter correct number</label></div>
+        <div>
+         <input type="text" name="" id="b"><label for="b">Please enter correct number</label>
+        </div>
+        <button id="add">Add</button>
+        <div id = "result">
+
+        </div>
+    </div>
+
+    <script>
+        
+        document.querySelector("#a").onkeyup = () => {
+            let a = parseInt(document.querySelector("#a").value);
+
+            if(!isNaN(a)) {
+                document.querySelector("[for=a]").style.display = "none";
+            }
+        }
+
+        document.querySelector("#b").onchange = function() {
+ let a = parseInt(document.querySelector("#b").value)
+ if( !isNaN(a) ) {
+ document.querySelector("[for=b]")
+ .style.display = "none"
+ }
+}
+
+
+        document.querySelector("#add").onclick = () => {
+            let a = parseInt(document.querySelector("#a").value);
+            let b = parseInt(document.querySelector("#b").value);
+            
+            if(isNaN(a)) document.querySelector("[for=a]").style.display = "inline";
+            if(isNaN(b)) document.querySelector("[for=b]").style.display = "inline";
+            let result = a + b;
+            if(!isNaN(result)) document.querySelector("#result").textContent = result;
+           // document.querySelector("#result").textContent = result;
+    }
+    </script> 
+    
+ </script>
+</body>
+</html>

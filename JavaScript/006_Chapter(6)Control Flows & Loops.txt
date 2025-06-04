@@ -1,0 +1,28 @@
+Control Flows & Loops
+---------------------
+
+Looping Objects & Arrays
+-------------------------
+Array တွေစီမံLို့အင်္ဂတွက် map, filter, reduce တို့လို Method တွေရှိပြီးဖြLစ်ပါတယ်။ ဒါပေမယ့် အင်္ဂဲ့ဒီMethod တွေက Objects တွေအင်္ဂတွက်သုံးလို့ မရပါဘူး။ Object တွေကို Loop လုပ်Lို့အင်္ဂတွက် for-inLoop ကိုသုံးနိုင်ပါတယ်။
+let user = { name: "Bob", age: 22, gender: "Male" }
+for(p in user) {
+ console.log(`${p} is ${user[p]}`)
+}
+// name is Bob
+// age is 22
+// gender is Male
+
+for-in Loop ကို ရိုးရိုး Array တွေအင်္ဂတွက်လည်း အင်္ဂသုံးပြုနိုင်ပါတယ်။ Array တွေအင်္ဂတွက် for-of Loop ကိုလည်း အင်္ဂသုံးပြုနိုင်ပါတယ်။
+
+let users = ["Alice", "Bob", "Tom", "Mary"]
+for(u of users) {
+ console.log(u)
+}
+// Alice
+// Bob
+// Tom
+// Mary
+
+*for-of 	Loop ကို Iterable Object တွေအင်္ဂတွက်ပဲသုံးလို့ရပါတယ်။
+
+*continue/break

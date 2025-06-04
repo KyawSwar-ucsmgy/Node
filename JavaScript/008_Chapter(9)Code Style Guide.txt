@@ -1,0 +1,68 @@
+အခန်း (၉) – Code Style Guide
+
+- JavaScript အင်္ဂတွက်ဆိုရင် Google ရဲ့ Style Guide
+
+Variables
+---------
+• All Cap: HELLO_WORLD
+• Snake Case: hello_world
+• Camel Case: helloWorld
+• Capital Case: HelloWorld
+
+ Constant တွေကြေညာLို့အင်္ဂတွက် All Cap ကို အင်္ဂသုံးပြုသင့်ပါတယ်။ ရိုးရိုး Variable တွေအင်္ဂတွက် Snake
+ Case ကိုသုံးသင့်ပြီး၊ Object Property တွေအင်္ဂတွက် camelCase ကိုသုံးသင့်ပါတယ်။
+
+const PI = 3.14
+const MIN = 0
+const MAX = 100
+let color_name = "red"
+let color_code = "#112233"
+
+Arrays & Objects
+-----------------
+-Array တွေကြေညာသတ်မှတ်တဲ့အင်္ဂခါ တန်Lိုးနည်းရင် တစ်ကြောင်းထဲ၊ တစ်ဆက်ထဲ ရေးလို့ရပါတယ်။ အင်္ဂဲ့ဒီလိုရေးတဲ့အင်္ဂခါ Comma ရဲ့နောက်မှာ Space တစ်ခုထည့်သင့်ပါတယ်။
+ let users = ["Alice", "Bob", "Tom", "Mary"]
+-တန်Lိုးတွေများရင်တော့ လိုင်းခွဲပြီးရေးသင့်ပါတယ်။ အင်္ဂဲ့ဒီလိုခွဲရေးတဲ့အင်္ဂခါ အင်္ဂLွင့်ကို Assignment Operatorနဲ့ တစ်လိုင်းထဲမှာထားပြီး အင်္ဂပိတ်ကို တွေအင်္ဂာက်ဆုံးမှာ သီးခြားတစ်လိုင်းနဲ့ ထားသင့်ပါတယ်။
+let users = [
+ "Alice",
+ "Bob",
+ "Tom",
+ "Mary",
+]
+Space ကို လုံးဝ မသုံးဘဲ Indent အင်္ဂတွက် Tab ကိုပဲ သုံးလို့လည်းရပါတယ်။
+
+-Object တွေကိုတော့ တစ်ချို့အင်္ဂရမ်းတိုတဲ့ Object တွေကလွဲရင် အင်္ဂများအင်္ဂားဖြLင့် လိုင်းခွဲပြီးတော့ ရေးသင့်ပါတယ်။ Property တွေ Method တွေအင်္ဂတွက် Camel Case ကို သုံးသင့်ပါတယ်။
+let user = {
+ firstName: "James",
+ sayHello () {
+ // Statements
+ },
+}
+
+Functions
+----------
+-Function တွေကြေညာတဲ့အင်္ဂခါ တွန့်ကွင်းအင်္ဂLွင့်ကို function Keyword နဲ့ တစ်လိုင်းထဲထားလို့ ရသလိုနောက်တစ်လိုင်းဆင်းပြီး ထားလို့လည်း ရပါတယ်။
+function add(a, b) {
+ // Statements
+}
+function sum(a, b)
+{
+ // Statements
+}
+Function အင်္ဂမည်တွေဟာ Camel Case ဖြLစ်သင့်ပါတယ်။
+
+Classes
+-------
+Class Name တွေဟာ Capital Case ဖြLစ်သင့်ပါတယ်။
+Property တွေMethod တွေကတော့ CamelCase ကို အင်္ဂသုံးပြုသင့်ပါတယ်။
+class Animal {
+ constructor(name) {
+ this.name = name
+ }
+ makeSound () {
+ // Statements
+ }
+}
+။ JavaScript မှာတော့ Private တွေကို ရှေ့ကနေ # သင်္ကေတ ခံရေးရ
+
+

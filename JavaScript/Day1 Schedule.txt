@@ -1,0 +1,64 @@
+JavaScript Schedule
+
+Total Videos (72)
+19/05/2025 => 
+1.Course Introduction
+2.Environment Setup
+3.Plugin Installation
+4.Basic Concepts
+5.Single Line and Multiple Line Comments
+6.Numbers and String
+7.Assign and Reassign
+8.Naming Convension Console
+9.JavaScript Array
+10.Object
+
+
+two types of variable declaration => let, var
+let => block scope variable
+var => 
+
+JS Data Types(64 bits float) => Number, Boolean, String
+
+STRING 
+-------
+
+SPECIAL DATA Types
+-------------------	
+undefined => the var that does not declare data type(not fill data) (let myVar)
+null => the var that does not have value (let myVar = null)
+NaN(Number data type) => Number but not a number
+
+Boolean
+--------
+five 'false' value => 0, ""(empty string), null, undefined, NaN
+other are 'true' value.(eg, " ", 1, -1, "false")
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+CHAPTER(3)- Expression, Statement and Operator
+
+Comments
+--------
+
+OPERATORS
+---------
++  => by using '+' operator can change from not number value to the number value
+ eg. -> +'5' //5
+     -> +'a' //NaN
+	 -> '5' + 5 //55
+	 -> +'5' + 5 //10
+	 
+**(exponent component) => 2**2=4, 2**3=8
+
+-if the operator same, run from 'left' to 'right' (eg. "$" + 4 + 5 // $45, 4 + 5 + "$" //9$
+
+Operator Presidents
+-------------------
+  -> ()
+  -> ++, --
+  -> *, /, %
+  -> +, -
+  
+Logical Operators
+-----------------

@@ -1,0 +1,54 @@
+		အခန်း (၇) – Object-Oriented Programming – OOP
+	-------------------------------------------------
+ 
+ Classes & Objects
+-------------------
+- Class ဆိုတာ Object Template လို့ ဆိုနိုင်ပါတယ်။ 
+let car = {
+ color: "Red",
+ wheels: 4,
+ drive() {
+ console.log("The car is driving")
+ }
+}
+let toyota = new Car
+toyota.wheels // 4
+toyota.drive() // The car is driving
+
+Object တည်ဆောက်စရာ မလိုဘဲ Class ကနေ တိုက်ရိုက် အင်္ဂသုံးပြုလိုရင် static Property နဲ့ static Method 
+class Calculator {
+ static PI = 3.14
+ static add(a, b) {
+ return a + b
+ }
+}
+Calculator.PI // 3.14
+Calculator.add(3, 4) // 7
+
+အများအင်္ဂားဖြLင့် တွေ့ရလေ့ရှိတဲ့ Access-Control Modifier တွေကတော့ – 
+• Public
+• Private
+• Protected
+• Static
+
+-Private ဆိုရင်တော့ Object ကနေတစ်ဆင့် အင်္ဂသုံးပြုခွင့် မပေးတော့ပါဘူး။ ရေးထားတဲ့Class အင်္ဂတွင်းထဲမှာပဲ သုံးခွင့်ရှိပါတော့တယ်။
+-JavaScript မှာတော့ static Keyword တစ်ခုပဲ ရှိပါတယ်။ public တွေprivate တွေမရှိပါဘူး။
+
+Keyword တွေအစား ရေးတဲ့အခါမှာ ဒီလိုရေးပေးရပါတယ်။
+class Car {
+ #hp = 150
+ color = "Color"
+ static info() {
+ console.log(`Horse Power: ${this.#hp}`)
+ }
+}
+
+-Class တွေတည်ဆောက်တဲ့အင်္ဂခါ အင်္ဂခြား Class တစ်ခုပေါ်မှာ အခြေခံပြီး တည်ဆောက်လို့ ရပါတယ်။ ဒီသဘောသဘာဝကို Inheritance လို့ခေါ်ပါတယ်။ အမွေဆက်ခံလိုက်တဲ့သဘောဖြLစ်လို့ ဒီနည်းကိုသုံးလိုက်ရင် ပင်မ Class ရဲ့လုပ်ဆောင်ချက်တွေကို ဆက်ခံတဲ့ Class က အင်္ဂလိုလိုရသွားတာပါ။
+
+- Class တွေအင်္ဂခုလို ဆက်ခံရေးသားတဲ့အင်္ဂခါ တစ်ကြိမ်မှာ Classတစ်ခုကိုပဲ Inherit လုပ်လို့ရပါတယ်။ Multiple-Inheritance ခေါ် Class နှစ်ခုသုံးခုကနေ တစ်ပြိုင်တည်းဆက်ခံရေးသားလို့တော့ မရပါဘူး။ 
+-Inheritance လုပ်ပြီး ဆက်ခံလိုက်တဲ့အင်္ဂခါ ဆက်ခံတဲ့ Class ရရှိမှာက Public Property နဲ့ Method တွေကိုသာ ရရှိမှာ ဖြLစ်ပါတယ်။ Private Property တွေ Method တွေကိုတော့ ရရှိမှာ မဟုတ်ပါဘူး။ Protected ရဲ့ 
+သဘောသဘာဝကတော့ ပြင်ပကနေ Access လုပ်ခွင့်မပေးဘူး၊ ဒါပေမယ့် Inherit လုပ် ဆက်ခံတဲ့သူကို သုံးခွင့်ပေးမယ် ဆိုတဲ့ သဘောပဲ ဖြစ်ပါတယ်။
+-။ ဒါကြောင့် Access-Control Modifier မှာ Protected လို့ ပေးထားလိုက်ရင်Private လိုမျိုး ပြင်ပကနေ အင်္ဂသုံးပြုခွင့်မရှိပါဘူး၊ ဒါပေမယ့် သူ့ကိုဆက်ခံထားတဲ့ Class တွေကတော့
+အင်္ဂသုံးပြုခွင့်ရမှာ ဖြLစ်ပါတယ်။ သိထားသင့်လို့ ထည့်ပြောတာပါ၊ JavaScript မှာ Protected ရေးထုံး မရှိပါဘူး
+-ဒါပေမယ့် Function တွေမှာ Hoisting/Lifting သဘောသဘာဝရှိပေမယ့် Class တွေမှာ မရှိပါဘူး။ ဒါကြောင့် Class တွေလို အင်္ဂရင်သုံးပြီး နောက်မှကြေညာလို့မရပါဘူး။ အင်္ဂသုံးမပြုခင် ကြိုတင်ကြေညာသတ်မှတ်ထားပေးLို့ လိုအင်္ဂပ်ပါတယ်။
+

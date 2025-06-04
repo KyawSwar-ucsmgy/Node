@@ -1,0 +1,222 @@
+Should study articles => Regular Expression, 
+
+Arrays & Objects
+----------------
+-> Array ဟာ JavaScript ရဲ့ Standard Object တစ်ခုဖြLစ်ပါတယ်။
+-> ရိုးရိုး Primitive Data Type တွေက တန်Lိုး တစ်ခုကိုသာ လက်ခံသိမ်းဆည်းပြီး Array ကတော့ တန်Lိုးတွေကို အတွဲလိုက်စုစည်းသိမ်းဆည်းနိုင်လို့ Compound Type သို့မဟုတ် Structure Type လို့ ခေါ်ကြပါတယ်။
+->Array တစ်ခုတည်ဆောက်Lို့အင်္ဂတွက် နည်းလမ်း (၂) မျိုးရှိပါတယ်။
+  -တစ်နည်းက Array Object Constructor ကို အင်္ဂသုံးပြုတဲ့နည်းပါ။
+    let mix = new Array("Bob", 3.14, true)
+  
+  -နောက်တစ်နည်းကတော့ လေးထောင်ကွင်း အင်္ဂLွင့်အင်္ဂပိတ်ကို အင်္ဂသုံးပြုခြင်းဖြLစ်ပါတယ်။
+
+->JavaScript Array တွေမှာ ထည့်သွင်းသိမ်းဆည်းနိုင်တဲ့ Data Type ကန့်သတ်ချက်မရှိပါဘူး
+->Array တစ်ခုထဲမှာ ထည့်သွင်းထားတဲ့ တန်Lိုးတွေကို လိုအင်္ဂပ်တဲ့အင်္ဂခါ Index အင်္ဂညွှန်းနံပါတ်ကိုသုံးပြီး ပြန်လည်ရယူ အင်္ဂသုံးပြုနိုင်ပါတယ်။(let name = mix[0]; // "Bob")
+->တန်Lိုးတွေပြင်လိုရင်ပဲဖြLစ်ဖြLစ်၊ ထပ်မံထည့်သွင်းလိုရင်ပဲဖြLစ်ဖြLစ် နှစ်သက်ရာ Index နံပါတ်ပေးပြီး ထည့်လို့ရပါတယ်။ ဒီလိုပါ 
+  let mix = [ "Bob", 3.14, true ]
+  mix[0] = "Alice"
+  mix[4] = 5
+
+->Array တစ်ခုထဲမှာ ရိုးရိုး String, Number စတဲ့ တန်Lိုးတွေသာမက တစ်ခြား Array တွေလည်း ရှိနိုင်ပါသေးတယ်။ ဒီလိုပါ –
+  let mix = [ [123, 456, 789], ['Ant', 'Cat', 'Dog'] ]
+  -let result = mix[0][1] //456
+  
+  Array Methods
+  -------------
+->  Method (၄) ခုကတော
+  (1)push() - Array ရဲ့နောက်ဆုံးကနေ Index တစ်ခုတိုးLို့အင်္ဂတွက် သုံးနိုင်ပါတယ်။
+  (2)pop() -  Array ရဲ့နောက်ဆုံး Index ကို Lယ်ထုတ်Lို့သုံးနိုင်ပါတယ်။
+  (3)shift() -  Array ရဲ့ရှေ့ဆုံး Index ကိုLယ်ထုတ်Lို့ သုံးပါတယ်။
+  (4)unshift() - Array ရဲ့ရှေ့ဆုံးမှာ Index တစ်ခုတိုးLို့ သုံးနိုင်ပါတယ်။
+  
+	let animals = ["Dog", "Cat", "Bird"]
+	animals.push("Cow") // animals → ["Dog", "Cat", "Bird", "Cow"]
+	animals.pop() // animals → ["Dog", "Cat", "Bird"]
+	animals.shift() // animals → ["Cat", "Bird"]
+	animals.unshift("Ant") // animals → ["Ant", "Cat", "Bird"]
+
+-> indexOf() နဲ့ splice()
+ -indexOf() နဲ့ Index တန်Lိုးကို ရှာနိုင်ပြီး၊ splice() နဲ့မလိုချင်တဲ့ Index ကို Lယ်ထုတ်နိုင်ပါတယ်။
+ let fruits = ["Apple", "Orange", "Mango", "Banana"]
+ fruits.indexOf("Mango") // 2
+ fruits.splice(2, 1) // fruits → ["Apple", "Orange", "Banana"]  (splice() အင်္ဂတွက် Argument နှစ်ခုပေးရပါတယ်။ ပထမ Argument က Index ဖြLစ်ပြီး ဒုတိယ Argument ကတော့ အရေအင်္ဂတွက် ဖြLစ်ပါတယ်။ အရေအင်္ဂတွက်မှာ 1 ကို ပေးလို့ တစ်ခုLျက်ပေးတာပါ။ Lျက်လိုတဲ့အရေအင်္ဂတွက်ကို လိုသလို ပေးနိုင်
+ပါတယ်။)
+ 
+-> join() - Array Index တွေကို တစ်ဆက်ထဲ တစ်တွဲထဲ ဖြLစ်သွားတွေအင်္ဂာင် တွဲဆက်ပြီး String အနေနဲ့ ရလဒ်ကို ပြန်ပေးနိုင်တဲ့ လုပ်ဆောင်ချက်ဖြLစ်ပါတယ်။
+  let fruits = ["Apple", "Orange", "Mango"]
+  let result = fruits.join(",") // result → Apple,Orange,Mango
+  
+*push(), pop(), shift(), unshift(), splice() စတဲ့ Method တွေက
+မူလ Array တန်Lိုးတွေကို ပြုပြင် ပြောင်းလဲသွားစေတဲ့ Method တွေပါ။ join() ကတော့ မူလ Array
+တန်Lိုးတွေကို မပြောင်းပါဘူး။ ရလာတဲ့ ရလဒ်ကိုသာ ပြန်ပေးတာပါ။ 
+
+->  map(), filter() နဲ့ reduce() -  မူလ Array တန်Lိုးတွေကို ထိခိုက်ပြောင်းလဲစေခြင်း မရှိဘဲ ရလဒ်ကို သီးခြားအနေနဲ့ ပြန်ပေးတဲ့ Method တွေပါ။ (All methods need function as argument)
+ map() -  Array Item အင်္ဂားလုံးပေါ်မှာ အင်္ဂလုပ်လုပ်ပြီး နောက်ဆုံး ရလာတဲ့ရလဒ်ကို Array အနေနဲ့ ပြန်ပေးမှာပါ။ Array ထဲကတန်Lိုးတွေကို တစ်ခုချင်းလိုသလိုပြုပြင်ရယူLို့ အသုံးဝင်ပါတယ်။
+	let nums = [1, 2, 3, 4, 5]
+	let result = nums.map(function(n) {
+	return n + 1
+	})
+	// result → [2, 3, 4, 5, 6]
+
+ filter() - filter() ရဲ့ထူးခြားချက်ကတော့ map() လို Item အ္ဂားလုံးကို ပြန်ပေးတာ မဟုတ်တော့ဘဲ return true ဖြစ်တဲ့ Item တွေကိုပဲ ပြန်ပေးတာပါ။
+	let nums = [1, 2, 3, 4, 5]
+	let result = nums.filter(function(n) {
+	return n % 2
+	})
+	// result → [1, 5, 7]
+	
+ reduce() - reduce() ရဲ့ Function Expression အင်္ဂတွက် Parameter နှစ်ခု.( Array ထဲက တန်Lိုးအင်္ဂားလုံးကို စုပေါင်းထားတဲ့ ရလဒ)
+ let result = [2, 3, 4, 5, 6].reduce((a, n) => a+ n)
+ // result → 20
+ 
+ Array Spread & Destructuring
+ ------------------------------
+ - အးလုံးကို တစ်ထပ်ထဲ တစ်ဆက်ထဲဖြLစ်စေချင်တာဆိုရင Spread Operator ကို သုံးနိုင်ပါတယ်။ 
+  let nums = [1, 2, 3]
+  let alphas = ['a', 'b', 'c']
+  let result = [ ...nums, ...alphas ] 
+// [ 1, 2, 3, 'a', 'b', 'c' ]
+
+ function add(a, b) {
+ return a + b
+}
+
+let nums = [123, 456]
+
+add(...nums) // 57
+
+Array Destructuring လုပ်ဆောင်ချက
+----------------------------
+let nums = [123, 456]
+let [a, b] = nums
+
+ Index တစ်ခုချင်းထောက်မနေဘဲ Array တစ်ခုလုံးကို ပေးလိုက်တာပါ။ လက်ခံတဲ့အင်္ဂခါမှာ Destructuring ရေးထုံးကိုသုံးပြီး လက်ခံထားလို့ တန်Lိုးတွေက သူ့နေရာနဲ့သူရောက်ရှိသွားမှာပဲ ဖြLစ်ပါတယ်။
+ 
+ function add([a, b]) {
+ return a + b
+ }
+ let nums = [123, 456]
+ add(nums) // 579
+ 
+ Argument အနေနဲ့ nums Array ကိုပေးလိုက်ပေးမယ့်၊ လက်ခံစဉ်ကတည်းက a နဲ့ b အင်္ဂဖြLစ် Destructure
+လုပ်ပြီးလက်ခံထားလို့ Function ရဲ့အင်္ဂတွင်းမှာ အင်္ဂသုံးပြုတဲ့အင်္ဂခါ a နဲ့ b ကို တိုက်ရိုက်အင်္ဂသုံးပြုနိုင်မှာပဲ ဖြLစ်ပါတယ်။
+
+String Object
+-------------
+-> let num = 3.14159
+ num.toFixed(3) // 3.142
+ 
+ နမူနာမှာ String ကြေညာပုံ အင်္ဂမျိုးမျိုးကိုပေးထားပါတယ်။
+ let name = "Bob"
+ let greet = `Hello ${name}`
+ let welcome = new String("Welcome")
+-name.length // 3
+-welcome.length // 7
+-'Hello'.length // 5
+
+let name = "Alice"
+name[2] // i
+name.charAt(0) // A
+
+• toUpperCase() Method ကို စာလုံး အင်္ဂကြီးတွေပြောင်းLို့ သုံးပါတယ်။
+• toLowerCase() ကိုတော့ စာလုံး အသေးတွေပြောင်းLို့ သုံးပါတယ်။
+• trim() ကို ရှေ့ဆုံးနဲ့ နောက်ဆုံးက Space တွေရှင်းLို့သုံးပါတယ်။
+• substr() ကိုတော့ လိုချင်တဲ့အင်္ဂပိုင်း ဖြLတ်ယူLို့သုံးပါတယ်။
+• split() ကိုတော့ အင်္ဂပိုင်းပိုင်း ခွဲထုတ်Lို့ သုံးပါတယ်။
+
+let name = "Alice"
+name.toUpperCase() // ALICE
+name.toLowerCase() // alice
+name.substr(0, 3) // Ali
+
+let text = "Hello World"
+text.split(" ") // ["Hello", "World"]
+text.split()
+// ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"]
+
+*String ရဲ့ split() နဲ့ Array ရဲ့ join() တွေကို တွဲပြီးသုံးကြလေ့ရှိပါတယ်။ Array တွေကို String ပြောင်းချင်တဲ့အင်္ဂခါနဲ့ String တွေကို Array ပြောင်းချင်တဲ့အင်္ဂခါမျိုးမှာ အင်္ဂလွန်အင်္ဂသုံးဝင်ပါတယ်
+
+-String Method တွေထဲမှာ search() နဲ့ replace() ဆိုတဲ့ Method တွေလည်း အင်္ဂသုံးဝင်ပါသေးတယ်။ ဒါပေမယ့် ဒီ Method တွေကို အင်္ဂသုံးပြုနိုင်Lို့အင်္ဂတွက် Regular Expression ဆိုတဲ့နည်းပညာတစ်မျိုးကို သိထားLို့လိုပါတယ်။
+-Standard Object တွေကို လိုအင်္ဂပ်သလို ပြင်ဆင်ဖြLည့်စွက်လို့လည်း ရပါသေးတယ်။ 
+String.prototype.greet = function() {
+ return "Hello, World"};
+let str = "Some String"
+str.greet() // Hello, World
+
+Creating Objects
+----------------
+->Object တစ်ခုတည်ဆောက်Lို့အင်္ဂတွက်လည်း Object Constructor ကိုသုံးနိုင်သလို Object Literal Operator အင်္ဂဖြLစ် တွန့်ကွင်းအင်္ဂLွင့်အင်္ဂပိတ်ကို သုံးနိုင်ပါတယ်။
+
+let cat = {
+ color: "Yellow",
+ name: "Shwe War",
+ legs: 4,
+}
+cat.legs // 4
+cat["color"] // Yellow
+
+-Array Index ထောက်သလို လေးထောင့်ကွင်းအင်္ဂLွင့်အင်္ဂပိတ်နဲ့ ရေးသားအင်္ဂသုံးပြုနိုင်သလို Object
+Property ကိုရယူသလို Dot Operator နဲ့လည်း ရေးသားအင်္ဂသုံးပြုနိုင်ပါတယ်။
+
+-Property တန်Lိုးတွေပြင်ဆင်တာ၊ ဖြLည့်စွက်တာတွေကိုလည်း နှစ်မျိုးရေးလို့ရတာပါပဲ။
+
+let bird = { color: "Green", legs: 2 }
+bird.name = "Shwe Gal"
+bird["color"] = "Blue"
+
+Spread & Destructuring
+-> let user = { name: "Bob", age: 22 }
+function greet(name, age) {
+ return `Hello ${name}, you are ${age} years old`
+}
+greet(...user) // Hello Bob, you are 22 years old
+let { name, age } = user
+// name → Bob
+// age → 22
+
+-> Object မှာ Method တွေသတ်မှတ်Lို့အင်္ဂတွက် Function Expression တွေကိုပဲ သုံးနိုင်ပါတယ်။ သက်ဆိုင်ရာ Index မှာ ရိုးရိုးတန်Lိုး ပေးမယ့်အင်္ဂစား Function တစ်ခုပေးလိုက်ရတာပါ။ ဒီလိုပါ – 
+
+let user = {
+ name: "Bob"
+ hello: function() {
+ return `Hello, I'm ${this.name}`
+ }
+}
+user.name // Bob
+user.name = Alice
+user.hello() // Hello, I'm Alice
+ => Object ရဲ့ ကိုယ်ပိုင် Property တွေMethod တွေကိုအသုံးပြုလိုရင် this Keyword ကို အင်္ဂသုံးပြုရပါတယ်။
+
+Object တွေLန်တီးတဲ့အင်္ဂခါ ဒီလိုအခြေအနေမျိုးကိုလည်း မကြာခဏ ကြုံရနိုင်ပါတယ်။
+let name = "Alice"
+let age = 22
+let user = {
+ name: name,
+ age: age
+}
+Property အင်္ဂမည်နဲ့ အင်္ဂသုံးပြုလိုတဲ့ Variable တူနေတာပါ။ အင်္ဂဲ့ဒီလို တူနေတဲ့အင်္ဂခါ နှစ်ခါရေးစရာ မလိုပါဘူး၊အခုလို အတိုကောက်ရေးလိုက်လို့ရပါတယ်။
+let name = "Alice"
+let age = 22
+let user = { name, age }
+
+-> JSON နဲ့ JavaScript Object တို့ဟာ ရေးထုံးအင်္ဂားဖြLင့် အင်္ဂတူတူပါပဲ။ ကွဲလွဲချက်အနေနဲ့ (၂) ချက်မှတ်ရပါမယ်။
+  (1)ပထမတစ်ချက်ကတော့ JSON မှာ Index/Key တွေကို Double Quote အင်္ဂLွင့်အင်္ဂပိတ်နဲ့ ရေးပေးရပါတယ်။ 
+  {
+ "name": "Bob",
+ "age": 22,
+ "gender": "Male"
+}
+ -နောက်ဆုံးက Trailing Comma ပါလို့မရတာကိုလည်း သတိပြုပါ။
+ (2)ဒုတိယကွဲလွဲချက်အနေနဲ့၊ တန်Lိုးအင်္ဂဖြLစ် JSON က လက်ခံတဲ့ အင်္ဂမျိုးအင်္ဂစား (၆) မျိုးပဲ ရှိပါတယ်။(String, Number, Boolean, null, Array, Object)
+ (JavaScript Object မှာလို Function တွေMethod တွေ ပါဝင်လို့ရမှာ မဟုတ်ပါဘူး။ Comment တွေကိုတောင် ထည့်သွင်းရေးသားလို့ ရမှာ မဟုတ်ပါဘူး။)
+ 
+ *JavaScript Object to JSON
+ let person = { name: "Alice", age: 21 }
+JSON.stringify(person) // { "name": "Alice", "age": 21 }
+
+ *JSON to javascript object
+ let json = '{ "name": "Alice", "age": 21 }'
+JSON.parse(json) // Object → { name: "Alice", age: 21 }
+
+(JavaScript build-in Object)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects   

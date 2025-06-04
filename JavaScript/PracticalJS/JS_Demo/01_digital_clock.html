@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            margin: 0;
+        }
+
+        #time {
+            font-size: 80px;
+            color: #00ffcc;
+            background-color: #222;
+            padding: 30px 60px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #00ffcc;
+        }
+    </style>
+</head>
+<body>
+    <div id="time">00:00:00</div>
+
+    <script>
+        function showTime() {
+            let now = new Date();
+            let hour = now.getHours();
+            let min = String(now.getMinutes()).padStart(2, '0');
+            let sec = String(now.getSeconds()).padStart(2, '0');
+
+            const ampm = hour >= 12? 'PM': 'AM';
+
+            hour = hour % 12;
+            hour = hour === 0? 12 : hour;
+            hour = String(hour).padStart(2, '0');
+            const formattedTime = `${hour}:${min}:${sec} ${ampm}`;
+            
+            document.getElementById("time").textContent = formattedTime;
+        }
+
+        //call once to show time immediately
+        showTime();
+
+        //then update every second
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>

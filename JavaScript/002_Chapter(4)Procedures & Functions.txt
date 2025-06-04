@@ -1,0 +1,62 @@
+CHAPTER(4) - Procedures & Functions
+-----------------------------------
+
+Procedures -> {Collection of Statements}
+    -> procedure add {
+		let a = 1;
+		let b = 2;
+		print a + b;
+		};
+	-> call add; //3
+	-> Procedure တွေက ကြိုတင်သတ်မှတ်ထားတဲ့ လုပ်ဆောင်ချက်တွေသာဖြစ်ပါတယ်။
+
+Functions -> Function ဆိုတာလည်း Procedure တစ်မျိုးပါပ.   Function တွေရဲ့ ထူးခြားချက်ကတော့ ပေးလာတဲ့ တန်ိုးကိုလက်ခံပြီး၊ အလုပ်လုပ်လို့ရလာတဲ့ ရလဒ်ကို ပြန်ပေးခြင်းပဲ ဖြLစ်ပါတယ်။ 
+ 
+ function add (x, y) {
+ let a = x;
+ let b = y;
+ return a + b;
+}
+ let result = add(2, 3);
+ print(result + 2);
+ 
+ 
+ => JavaScript အင်္ဂပါအင်္ဂဝင် Programming Language အင်္ဂများစုမှာ Function ရေးသားနည်းတစ်နည်း၊
+Procedure ရေးသားနည်း တစ်နည်းဆိုပြီး ခွဲထားကြလေ့ မရှိပါဘူး။ တစ်နည်းထဲပဲ ထားကြပါတယ်။ နှစ်
+မျိုးခွဲပြီးတော့လည်း ခေါ်မနေကြတော့ပါဘူး။ နှစ်မျိုးလုံးကိုခြုံပြီး Function လို့ပဲ ခေါ်ကြပါတယ်။ 
+
+Default & Rest Parameters
+--------------------------
+function add(a, b = 0) {
+ return a + b
+}
+add(1, 2) // 3
+add(1) // 1
+
+-> JavaScript မှာ Rest Parameter ဆိုတာရှိပါသေးတယ်။ ပါလာသမျှ Argument တန်Lိုးအဂားလုံးကိုလက်ခံပေးနိုင်တဲ့ Parameter ပါ။ ဒီလိုရေးရပါတယ်။
+function add(a, b, ...c) {
+ console.log(c)
+}
+add(1, 2, 3, 4, 5) // [3, 4, 5]
+
+
+Arrow Function
+--------------
+
+Function Hoisting(အရင်သုံးပြီး နောက်မှကြေညာလိုက်တာပါ)
+------------------
+-> add(1, 3); //4
+ function add(a, b) { return a + b};
+ 
+ add(1, 3);  //ERROR
+ let add = function(a, b) { return a + b};
+ 
+ * var (access), let(cannot access)
+ 
+ 
+ Variable Scope
+ ---------------
+ local variable so outer scope ka ny call maya
+ 
+ 
+
